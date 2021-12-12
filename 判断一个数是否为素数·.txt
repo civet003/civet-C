@@ -1,0 +1,27 @@
+#include "stdafx.h"
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int judge(int x);
+	int n;
+	printf("请一个大于一的正整数:");
+	scanf("%d",&n);
+	if(n>1)
+		judge(int(n));
+	else if(n==1)
+		printf("%d既不是质数，也不是素数\n",n);
+	else
+		printf("请输入大于一的正整数！！\n");
+}
+int judge(int x)
+{
+	int i;
+	for(i=2;i<=x-1;i++)
+		if(x%i==0)
+			break;
+	if(i==x)
+		printf("%d是一个素数\n",x);
+	else
+		printf("%d不是一个素数\n",x);
+	return 0;
+}
