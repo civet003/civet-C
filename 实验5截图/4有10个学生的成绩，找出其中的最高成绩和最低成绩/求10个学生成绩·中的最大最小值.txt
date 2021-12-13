@@ -1,0 +1,47 @@
+//某次考试有10个学生的成绩，找出其中的最高成绩和最低成绩
+#include "stdafx.h"
+int Max (int arr[])//定义函数
+{
+	int i = 0;
+	int max = 0;
+	max = arr[0];//令最大值等于数组中第一个数
+	for (i = 0; i < 10; i++)
+	{
+		if (arr[i]>max)//依次与最大值比较
+		{
+		max = arr[i];
+		}
+	}
+	return max;
+}
+int Min (int arr[])
+{
+	int i = 0;
+	int min = 0;
+	min = arr[0];//令最小值等于数组中第一个数
+	for (i = 0; i < 10; i++)
+	{
+		if (arr[i]<min)//依次与最小值比较
+		{
+			min = arr[i];
+		}
+	}
+	return min;
+}
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int arr[10] = { 0 };
+	int max = 0;
+	int min = 0;
+	printf("请输入10个学生的成绩:\n");
+	for (int i = 0; i < 10; i++)
+	{
+		scanf("%d", &arr[i]);//将10个数放在数组中
+	}
+	max = Max( arr);//调用函数
+	printf("max=%d\n", max);
+	min = Min( arr);//调用函数
+	printf("min=%d\n", min);
+	return 0;
+}
+

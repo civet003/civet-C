@@ -1,0 +1,15 @@
+{
+	int i,n;
+	int sum1=0,sum2=0;
+	printf("请输入n的值:");
+	scanf("%d",&n);
+	for (i=1;i<=n;++i)
+	{
+		if(i & 1)
+			sum1+=i;
+		else
+			sum2+=i;
+	}
+	printf("前n项奇数之和为:%d\n前n项偶数之和为:%d\n",sum1,sum2);
+	return 0;
+}

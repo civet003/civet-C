@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include "string.h"
+int letter=0,digit=0,blank=0,other=0;
+void lpl(char a[]);
+int _tmain(int argc, _TCHAR* argv[])
+{
+    char a[100];
+    gets(a);
+    lpl(a);
+    printf("字母:%d\n数字:%d\n空格:%d\n其他:%d\n",letter,digit,blank,other);
+    return 0;
+}
+void lpl(char a[])
+{
+    char *p;
+    for(p=a;*p != '\0'; p++)
+    {
+        if(*p==' ')
+            blank++;
+        else if(*p>='a'&&*p<='z'||*p>='A'&&*p<='Z')
+            letter++;
+        else if(*p>='0'&&*p<='9')
+            digit++;
+        else
+            other++;
+    }
+}
