@@ -1,0 +1,17 @@
+int _tmain(int argc, _TCHAR* argv[])
+{
+	char a;
+	char b;
+	char c;
+	a=getchar();       //输入的三个字母中间不能用空格隔开，因为空格算一个字符,会占掉一格位置
+	b=getchar();      //例如输入:      a b c      打印结果:A B
+	c=getchar();      //正确输入格式:abc        打印结果:ABC
+	a-=32;
+	b-=32;
+	c-=32;
+	putchar(a);
+	putchar(b);
+	putchar(c);
+	putchar('\n');
+	return 0;
+}
